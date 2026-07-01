@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "";
+const WHATSAPP_NUMBER = "5531992152738";
 
 const quickAccess = document.querySelector(".quick-access");
 const quickCards = Array.from(document.querySelectorAll(".quick-card"));
@@ -73,7 +73,7 @@ function buildWhatsAppMessage() {
   const observacoes = valueFromForm(formData, "observacoes", "Sem observacoes por enquanto");
 
   return [
-    "Ola, Drop Drinks! Gostaria de solicitar um orcamento.",
+    "Ola, Mr. DROP! Gostaria de solicitar um orcamento.",
     "",
     `Nome: ${nome}`,
     `Tipo de evento: ${evento}`,
