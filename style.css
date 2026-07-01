@@ -425,6 +425,13 @@ h3 {
 .drink-card {
   position: relative;
   overflow: hidden;
+
+  padding: 28px 150px 34px 28px;
+  min-height: 190px;
+
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
 }
 
 .drink-card::before {
@@ -450,7 +457,7 @@ h3 {
   position: relative;
   z-index: 1;
 }
-
+/* 
 .drink-card:nth-child(2)::before,
 .drink-card:nth-child(6)::before {
   background: rgba(246, 194, 26, 0.22);
@@ -459,7 +466,7 @@ h3 {
 .drink-card:nth-child(3)::before,
 .drink-card:nth-child(4)::before {
   background: rgba(184, 105, 56, 0.18);
-}
+} */
 
 .drink-tag,
 .package-card > span {
