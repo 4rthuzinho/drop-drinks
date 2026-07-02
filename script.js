@@ -1,5 +1,6 @@
 const WHATSAPP_NUMBER = "5531992152738";
 
+const siteHeader = document.querySelector(".site-header");
 const quickAccess = document.querySelector(".quick-access");
 const quickCards = Array.from(document.querySelectorAll(".quick-card"));
 const sections = Array.from(document.querySelectorAll("[data-section]"));
@@ -15,6 +16,12 @@ const futureAdmin = {
 };
 
 function updateQuickAccessMode() {
+  const hasScrolled = window.scrollY > 120;
+
+  if (siteHeader) {
+    siteHeader.classList.toggle("is-scrolled", hasScrolled);
+  }
+
   if (!quickAccess) return;
   quickAccess.classList.toggle("is-tabs", window.scrollY > 260);
 }
