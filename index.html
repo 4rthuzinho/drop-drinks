@@ -23,21 +23,16 @@
       </a>
 
       <nav class="header-nav" aria-label="Navegacao principal">
+        <a href="#topo">Home</a>
+        <a href="#festa">Sobre</a>
         <a href="#carta">Carta</a>
-        <a href="#festa">Festa</a>
         <a href="#pacotes">Pacotes</a>
-        <a href="#orcamento">WhatsApp</a>
+        <a href="#orcamento">Orcamento</a>
       </nav>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true">
-          <div class="photo-tile tile-bartender"></div>
-          <div class="photo-tile tile-fruits"></div>
-          <div class="photo-tile tile-toast"></div>
-        </div>
-
         <div class="hero-content">
           <p class="eyebrow">Aniversarios | Casamentos | Confraternizacoes</p>
           <h1 id="hero-title">O melhor da coquetelaria para seu evento.</h1>
@@ -56,22 +51,22 @@
       <section class="quick-access" aria-label="Acesso rapido">
         <div class="quick-shell">
           <a class="quick-card active" href="#carta" data-tab="carta">
-            <span>01</span>
+            <span>Carta</span>
             <strong>Carta de Drinks</strong>
             <small>Classicos, autorais e opcoes sem alcool.</small>
           </a>
           <a class="quick-card" href="#festa" data-tab="festa">
-            <span>02</span>
+            <span>Evento</span>
             <strong>Dados da Festa</strong>
             <small>Convidados, data, local e duracao.</small>
           </a>
           <a class="quick-card" href="#pacotes" data-tab="pacotes">
-            <span>03</span>
+            <span>Pacotes</span>
             <strong>Pacotes</strong>
             <small>Escolha o formato ideal para seu evento.</small>
           </a>
           <a class="quick-card" href="#orcamento" data-tab="orcamento">
-            <span>04</span>
+            <span>Contato</span>
             <strong>WhatsApp</strong>
             <small>Mensagem pronta para enviar.</small>
           </a>
@@ -87,18 +82,31 @@
         <div class="section-heading">
           <p class="eyebrow">Carta de Drinks</p>
           <h2 id="carta-title">
-            Cores vivas, frutas frescas e drinks que combinam com foto.
+            Uma carta bonita de ver, facil de pedir e boa de beber.
           </h2>
           <p>
-            Uma carta com classicos, tropicais e opcoes sem alcool para
-            casamentos, debutantes, aniversarios e confraternizacoes.
+            A selecao pode ser ajustada para o perfil da festa: mais classica,
+            mais tropical, mais autoral ou com opcoes sem alcool para incluir
+            todos os convidados.
           </p>
+        </div>
+
+        <div class="section-feature">
+          <div class="feature-photo feature-photo-drinks"></div>
+          <div class="feature-copy">
+            <span>Mr. DROP no evento</span>
+            <strong>Frutas frescas, apresentacao limpa e drinks montados na hora.</strong>
+            <p>
+              A carta e pensada para funcionar no fluxo real da festa: recepcao,
+              pista, fotos, brindes e momentos de maior movimento no bar.
+            </p>
+          </div>
         </div>
 
         <div class="drink-grid">
           <article
             class="drink-card"
-            style="--drink-img: url('images/mojito.png')"
+            style="--drink-img: url(&quot;images/mojito.png&quot;)"
           >
             <span class="drink-tag">Classico</span>
             <h3>Mojito</h3>
@@ -110,7 +118,7 @@
 
           <article
             class="drink-card"
-            style="--drink-img: url('images/gin-tropical.png')"
+            style="--drink-img: url(&quot;images/gin-tropical.png&quot;)"
           >
             <span class="drink-tag">Queridinho</span>
             <h3>Gin Tropical</h3>
@@ -122,7 +130,7 @@
 
           <article
             class="drink-card"
-            style="--drink-img: url('images/caipirinha.png')"
+            style="--drink-img: url(&quot;images/caipirinha.png&quot;)"
           >
             <span class="drink-tag">Brasil</span>
             <h3>Caipirinha</h3>
@@ -134,7 +142,7 @@
 
           <article
             class="drink-card"
-            style="--drink-img: url('images/signature.png')"
+            style="--drink-img: url(&quot;images/signature.png&quot;)"
           >
             <span class="drink-tag">Autorais</span>
             <h3>Mr. DROP Signature</h3>
@@ -146,7 +154,7 @@
 
           <article
             class="drink-card"
-            style="--drink-img: url('images/mocktails.png')"
+            style="--drink-img: url(&quot;images/mocktails.png&quot;)"
           >
             <span class="drink-tag">Sem alcool</span>
             <h3>Mocktails</h3>
@@ -158,7 +166,7 @@
 
           <article
             class="drink-card"
-            style="--drink-img: url('images/spritz.png')"
+            style="--drink-img: url(&quot;images/spritz.png&quot;)"
           >
             <span class="drink-tag">Brinde</span>
             <h3>Spritz</h3>
@@ -179,8 +187,12 @@
         <div class="section-heading">
           <p class="eyebrow">Dados da Festa</p>
           <h2 id="festa-title">
-            Do brinde dos noivos ao ultimo copo da pista.
+            O bar entra no ritmo da sua festa.
           </h2>
+          <p>
+            Antes do evento, entendemos o local, a quantidade de convidados e o
+            estilo da comemoracao para montar uma operacao bonita e funcional.
+          </p>
         </div>
 
         <div class="info-grid">
@@ -223,7 +235,12 @@
       >
         <div class="section-heading">
           <p class="eyebrow">Pacotes</p>
-          <h2 id="pacotes-title">Pacotes com cara de festa bem cuidada.</h2>
+          <h2 id="pacotes-title">Escolha o formato. A gente ajusta os detalhes.</h2>
+          <p>
+            Os pacotes servem como ponto de partida. Depois, a proposta e
+            refinada conforme convidados, duracao, estrutura do local e carta
+            escolhida.
+          </p>
         </div>
 
         <div class="package-grid">
@@ -264,112 +281,145 @@
         data-section="orcamento"
         aria-labelledby="orcamento-title"
       >
-        <div class="section-heading">
-          <p class="eyebrow">Orcamento no WhatsApp</p>
-          <h2 id="orcamento-title">
-            Preencha os dados e envie direto para o Mr. DROP.
-          </h2>
-          <p>
-            Nenhuma informacao fica salva aqui. O site apenas monta o texto para
-            abrir no WhatsApp.
-          </p>
+        <div class="quote-layout">
+          <div class="section-heading quote-heading">
+            <p class="eyebrow">Orçamento no WhatsApp</p>
+
+            <h2 id="orcamento-title">
+              Conta pra gente como vai ser seu evento.
+            </h2>
+
+            <p>
+              Com essas informações, a gente entende o tamanho da festa, o
+              perfil dos convidados e já te chama no WhatsApp com uma proposta
+              mais certeira.
+            </p>
+
+            <div class="quote-note">
+              <strong>Sem orçamento genérico.</strong>
+              <span>
+                Primeiro entendemos o evento, depois sugerimos a carta, equipe e
+                estrutura ideal.
+              </span>
+            </div>
+          </div>
+
+          <form class="quote-form" id="quoteForm">
+            <div class="form-grid">
+              <label>
+                Seu nome
+                <input
+                  type="text"
+                  name="nome"
+                  placeholder="Ex: Ana Clara"
+                  required
+                />
+              </label>
+
+              <label>
+                Tipo de evento
+                <select name="evento" required>
+                  <option value="">Selecione</option>
+                  <option>Casamento</option>
+                  <option>Aniversário</option>
+                  <option>Formatura</option>
+                  <option>Corporativo</option>
+                  <option>Confraternização</option>
+                  <option>Outro</option>
+                </select>
+              </label>
+
+              <label>
+                Data do evento
+                <input type="date" name="data" />
+              </label>
+
+              <label>
+                Cidade ou espaço
+                <input
+                  type="text"
+                  name="local"
+                  placeholder="Ex: Belo Horizonte / Espaço X"
+                />
+              </label>
+
+              <label>
+                Quantidade de convidados
+                <input
+                  type="number"
+                  name="convidados"
+                  min="1"
+                  placeholder="Ex: 120"
+                />
+              </label>
+
+              <label>
+                Tempo de atendimento
+                <select name="duracao">
+                  <option value="">Selecione</option>
+                  <option>3 horas</option>
+                  <option>4 horas</option>
+                  <option>5 horas</option>
+                  <option>6 horas ou mais</option>
+                </select>
+              </label>
+
+              <label>
+                Pacote de interesse
+                <select name="pacote">
+                  <option>Celebration</option>
+                  <option>Essencial</option>
+                  <option>Premium</option>
+                  <option>Ainda não sei</option>
+                </select>
+              </label>
+
+              <label>
+                Preferência de drinks
+                <input
+                  type="text"
+                  name="preferencias"
+                  placeholder="Ex: gin, caipirinhas, sem álcool..."
+                />
+              </label>
+            </div>
+
+            <label class="full-label">
+              Me conta um pouco da festa
+              <textarea
+                name="observacoes"
+                rows="4"
+                placeholder="Ex: vai ter cerimônia antes, pista depois, público mais jovem, preferência por drinks tropicais..."
+              ></textarea>
+            </label>
+
+            <div class="message-preview">
+              <strong>Mensagem que será enviada</strong>
+              <textarea id="messagePreview" rows="8" readonly></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="button primary" type="submit">
+                Chamar no WhatsApp
+              </button>
+              <button class="button secondary" type="button" id="copyMessage">
+                Copiar mensagem
+              </button>
+            </div>
+
+            <p class="quote-disclaimer">
+              O site apenas monta a mensagem. A combinação final é feita pelo
+              WhatsApp.
+            </p>
+
+            <p
+              class="form-status"
+              id="formStatus"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
         </div>
-
-        <form class="quote-form" id="quoteForm">
-          <div class="form-grid">
-            <label>
-              Nome
-              <input type="text" name="nome" placeholder="Seu nome" required />
-            </label>
-            <label>
-              Tipo de evento
-              <select name="evento" required>
-                <option value="">Selecione</option>
-                <option>Casamento</option>
-                <option>Aniversario</option>
-                <option>Formatura</option>
-                <option>Corporativo</option>
-                <option>Confraternizacao</option>
-                <option>Outro</option>
-              </select>
-            </label>
-            <label>
-              Data
-              <input type="date" name="data" />
-            </label>
-            <label>
-              Cidade/local
-              <input
-                type="text"
-                name="local"
-                placeholder="Cidade ou espaco do evento"
-              />
-            </label>
-            <label>
-              Convidados
-              <input
-                type="number"
-                name="convidados"
-                min="1"
-                placeholder="Ex: 120"
-              />
-            </label>
-            <label>
-              Duracao
-              <select name="duracao">
-                <option value="">Selecione</option>
-                <option>3 horas</option>
-                <option>4 horas</option>
-                <option>5 horas</option>
-                <option>6 horas ou mais</option>
-              </select>
-            </label>
-            <label>
-              Pacote de interesse
-              <select name="pacote">
-                <option>Celebration</option>
-                <option>Essencial</option>
-                <option>Premium</option>
-                <option>Ainda nao sei</option>
-              </select>
-            </label>
-            <label>
-              Preferencias de drinks
-              <input
-                type="text"
-                name="preferencias"
-                placeholder="Gin, caipirinhas, sem alcool..."
-              />
-            </label>
-          </div>
-
-          <label class="full-label">
-            Observacoes
-            <textarea
-              name="observacoes"
-              rows="4"
-              placeholder="Conte detalhes importantes sobre a festa"
-            ></textarea>
-          </label>
-
-          <div class="message-preview">
-            <strong>Previa da mensagem</strong>
-            <textarea id="messagePreview" rows="8" readonly></textarea>
-          </div>
-
-          <div class="form-actions">
-            <button class="button primary" type="submit">Abrir WhatsApp</button>
-            <button class="button secondary" type="button" id="copyMessage">
-              Copiar mensagem
-            </button>
-          </div>
-          <p
-            class="form-status"
-            id="formStatus"
-            role="status"
-            aria-live="polite"
-          ></p>
-        </form>
       </section>
 
       <section
@@ -392,6 +442,16 @@
       <p>Mr. DROP - o melhor da coquetelaria para seu evento.</p>
       <a href="#topo">Voltar ao topo</a>
     </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/5531992152738"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chamar no WhatsApp"
+    >
+      WA
+    </a>
 
     <script src="script.js"></script>
   </body>
