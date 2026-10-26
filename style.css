@@ -415,8 +415,7 @@ h3 {
 .package-card,
 .info-panel,
 .timeline,
-.quote-form,
-.admin-placeholder > div {
+.quote-form {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
@@ -623,23 +622,6 @@ textarea {
   font-weight: 800;
 }
 
-.admin-placeholder {
-  padding: 42px clamp(18px, 5vw, 72px) 92px;
-}
-
-.admin-placeholder > div {
-  max-width: 1180px;
-  padding: 28px;
-}
-
-.admin-placeholder h2 {
-  font-size: clamp(1.6rem, 3vw, 2.6rem);
-}
-
-.admin-placeholder p:last-child {
-  color: var(--muted);
-}
-
 .site-footer {
   display: flex;
   flex-wrap: wrap;
@@ -804,7 +786,7 @@ textarea {
 
 .quote-layout {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 1fr;
   gap: 60px;
   align-items: start;
 }
@@ -1201,10 +1183,6 @@ textarea::placeholder {
   color: #111;
 }
 
-.admin-placeholder {
-  display: none;
-}
-
 .quote-heading .eyebrow {
   color: var(--gold);
 }
@@ -1250,6 +1228,21 @@ textarea::placeholder {
 }
 
 /* Header e abas com comportamento de scroll */
+.drink-picker { margin: 24px 0; border: 1px solid #c59b5c; padding: 18px; }
+#drinkOptions { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+#drinkOptions label { display: flex; align-items: center; gap: 10px; }
+#drinkOptions input { width: 20px; height: 20px; accent-color: #4f8d28; }
+.quote-result { margin-top: 20px; padding: 18px; border-left: 3px solid #c59b5c; background: rgba(0,0,0,.35); line-height: 1.6; }
+[hidden] { display: none !important; }
+.admin-shell { max-width: 1100px; margin: auto; padding: 40px 20px; }
+.admin-shell h1 { font-size: clamp(2rem,5vw,3.5rem); margin-top: 32px; }
+.admin-shell label { color: #343027; }
+.admin-shell input,.admin-shell select { border-color: #938b7b; }
+.admin-drink { padding: 20px; margin: 20px 0; border: 1px solid #938b7b; }
+.form-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.quote-heading { position: static; }
+@media(max-width:560px) { #drinkOptions { grid-template-columns: 1fr; } .quote-section { padding: 70px 18px; } }
+
 .hero {
   scroll-margin-top: 0;
 }
@@ -1326,4 +1319,73 @@ textarea::placeholder {
   .quick-access.is-tabs {
     top: 64px;
   }
+}
+
+/* Orçamento em toda a largura, com leitura horizontal no computador. */
+.quote-launcher { display: grid; grid-template-columns: 1fr auto; gap: 20px 36px; align-items: center; padding: clamp(26px,5vw,56px); border: 1px solid rgba(197,155,92,.5); background: rgba(15,15,12,.78); }
+.quote-launcher h3 { color: #fff; font-size: clamp(1.8rem,3vw,2.8rem); margin: 12px 0; }
+.quote-launcher p { max-width: 650px; color: #dfd6c8; line-height: 1.7; }
+.quote-launcher small { grid-column: 1 / -1; color: #c9bdab; }
+body.quote-modal-open { overflow: hidden; }
+.quote-dialog { width: min(880px,calc(100% - 40px)); max-height: calc(100dvh - 40px); margin: auto; padding: 0; border: 1px solid #78613c; border-radius: 18px; background: #171611; color: #fff8ea; box-shadow: 0 35px 120px #0008; color-scheme: dark; }
+.quote-dialog::backdrop { background: rgba(0,0,0,.76); backdrop-filter: blur(7px); }
+.wizard-progress { height: 4px; background: #ffffff12; }
+.wizard-progress span { display: block; height: 100%; background: #c59b5c; transition: width .25s ease; }
+.wizard-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; border-bottom: 1px solid #ffffff12; }
+.wizard-brand { display: flex; align-items: center; gap: 16px; color: #c9bdab; font-size: .82rem; }
+.wizard-brand img { width: 74px; height: 48px; object-fit: contain; }
+.wizard-close { width: 42px; height: 42px; border: 1px solid #ffffff33; border-radius: 50%; background: transparent; color: #fff; font-size: 27px; cursor: pointer; }
+.wizard-content { padding: clamp(24px,5vw,52px); min-height: 470px; }
+.wizard-kicker { color: #c59b5c; font-size: .78rem; text-transform: uppercase; letter-spacing: 1.5px; }
+.wizard-content h2 { margin: 16px 0; color: #fff8ea; font-size: clamp(1.9rem,4vw,3rem); line-height: 1.1; text-transform: none; }
+#wizardHint { color: #c9bdab; line-height: 1.6; margin-bottom: 28px; }
+.quote-dialog .wizard-form { padding: 0; border: 0; background: none; backdrop-filter: none; }
+.wizard-step { animation: wizard-enter .2s ease-out; min-width: 0; }
+.wizard-step > label, .wizard-step .cep-field { max-width: 100%; margin-top: 0; }
+.wizard-step input:not([type=checkbox]), .wizard-step select, .wizard-step textarea { font-size: 1.1rem; padding: 16px; color-scheme: light; }
+.wizard-step .drink-picker { margin: 0; border: 0; padding: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.wizard-step .full-label { margin-top: 16px; }
+.wizard-result .quote-result { margin-top: 0; font-size: clamp(1.3rem,3vw,2rem); font-weight: 800; }
+.wizard-result .message-preview { color: #c9bdab; }
+.wizard-result summary { cursor: pointer; padding-block: 12px; }
+.quote-dialog #drinkOptions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.quote-dialog #drinkOptions label { min-height: 66px; padding: 15px; border: 1px solid #ffffff2b; border-radius: 10px; cursor: pointer; transition: border-color .15s, background .15s; }
+.quote-dialog #drinkOptions label:has(input:checked) { background: #c59b5c20; border-color: #c59b5c; }
+.quote-dialog #drinkOptions label:has(input:disabled):not(:has(input:checked)) { opacity: .5; }
+.wizard-footer { display: flex; justify-content: space-between; gap: 16px; margin-top: 30px; border-top: 1px solid #ffffff1a; padding-top: 24px; }
+.wizard-footer .button { cursor: pointer; }
+.wizard-footer button:disabled { opacity: .45; cursor: default; transform: none; }
+.quote-dialog #quoteMessage { font-size: .9rem; }
+.quote-dialog .quote-result { color: #fff8ea; }
+.wizard-close:focus-visible,.wizard-content h2:focus-visible { outline: 2px solid #c59b5c; outline-offset: 4px; }
+@keyframes wizard-enter { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+@media(prefers-reduced-motion:reduce) { .wizard-step { animation: none; } .wizard-progress span { transition: none; } }
+@media(max-width:600px) {
+  .quote-launcher { grid-template-columns: 1fr; }
+  .quote-dialog { width: calc(100% - 20px); max-height: calc(100dvh - 20px); border-radius: 12px; }
+  .wizard-header { padding: 14px 20px; }
+  .wizard-brand span { display: none; }
+  .wizard-content { min-height: 0; padding: 24px 20px; }
+  .quote-dialog #drinkOptions { grid-template-columns: 1fr; }
+  .wizard-footer .button { width: auto; padding-inline: 18px; }
+}
+.quote-layout { max-width: 1280px; margin-inline: auto; gap: 32px; }
+.quote-heading { display: grid; grid-template-columns: 1.4fr 1fr; gap: 12px 40px; max-width: none; margin: 0; position: static; }
+.quote-heading .eyebrow, .quote-heading h2 { grid-column: 1; }
+.quote-heading h2 { max-width: none; font-size: clamp(2.5rem,4.2vw,4.5rem); margin: 0; }
+.quote-heading p:not(.eyebrow) { grid-column: 1; max-width: none; margin: 0; }
+.quote-heading .quote-note { grid-column: 2; grid-row: 1 / 4; margin: 0; max-width: none; align-self: center; }
+.quote-form > .form-grid { grid-template-columns: repeat(4,minmax(0,1fr)); align-items: start; }
+.cep-field { display: grid; gap: 10px; }
+.cep-field small { color: rgba(255,255,255,.75); line-height: 1.5; }
+.quote-form .checkbox-label { display: flex; gap: 8px; align-items: center; font-weight: 400; }
+.checkbox-label input { width: 18px; height: 18px; accent-color: #4f8d28; }
+.cep-field input:disabled { opacity: .55; }
+.quote-form #drinkOptions { grid-template-columns: repeat(3,minmax(0,1fr)); }
+@media(max-width:1100px) { .quote-form > .form-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:700px) {
+  .quote-heading { grid-template-columns: 1fr; }
+  .quote-heading .quote-note { grid-column: 1; grid-row: auto; }
+  .quote-form > .form-grid, .quote-form #drinkOptions { grid-template-columns: 1fr; }
 }

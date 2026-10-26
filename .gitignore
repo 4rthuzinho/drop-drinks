@@ -1,0 +1,10 @@
+node_modules/
+public/
+.env
+.env.*
+!.env.example
+.vercel/
+config/*.tmp
+
+.vercel
+.env*

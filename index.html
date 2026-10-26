@@ -275,167 +275,58 @@
         </div>
       </section>
 
-      <section
-        class="section quote-section"
-        id="orcamento"
-        data-section="orcamento"
-        aria-labelledby="orcamento-title"
-      >
+      <section class="section quote-section" id="orcamento" data-section="orcamento" aria-labelledby="orcamento-title">
         <div class="quote-layout">
           <div class="section-heading quote-heading">
-            <p class="eyebrow">Orçamento no WhatsApp</p>
-
-            <h2 id="orcamento-title">
-              Conta pra gente como vai ser seu evento.
-            </h2>
-
-            <p>
-              Com essas informações, a gente entende o tamanho da festa, o
-              perfil dos convidados e já te chama no WhatsApp com uma proposta
-              mais certeira.
-            </p>
-
-            <div class="quote-note">
-              <strong>Sem orçamento genérico.</strong>
-              <span>
-                Primeiro entendemos o evento, depois sugerimos a carta, equipe e
-                estrutura ideal.
-              </span>
-            </div>
+            <p class="eyebrow">Orçamento automático</p>
+            <h2 id="orcamento-title">Seu bar, do seu jeito.</h2>
+            <p>Escolha sua carta e confira a estimativa para a festa.</p>
+            <div class="quote-note"><strong>Consumo livre.</strong><span>Insumos, preparação, montagem personalizada, atendimento e limpeza. De 3 a 6 drinks; recomendamos 4.</span></div>
           </div>
-
-          <form class="quote-form" id="quoteForm">
-            <div class="form-grid">
-              <label>
-                Seu nome
-                <input
-                  type="text"
-                  name="nome"
-                  placeholder="Ex: Ana Clara"
-                  required
-                />
-              </label>
-
-              <label>
-                Tipo de evento
-                <select name="evento" required>
-                  <option value="">Selecione</option>
-                  <option>Casamento</option>
-                  <option>Aniversário</option>
-                  <option>Formatura</option>
-                  <option>Corporativo</option>
-                  <option>Confraternização</option>
-                  <option>Outro</option>
-                </select>
-              </label>
-
-              <label>
-                Data do evento
-                <input type="date" name="data" />
-              </label>
-
-              <label>
-                Cidade ou espaço
-                <input
-                  type="text"
-                  name="local"
-                  placeholder="Ex: Belo Horizonte / Espaço X"
-                />
-              </label>
-
-              <label>
-                Quantidade de convidados
-                <input
-                  type="number"
-                  name="convidados"
-                  min="1"
-                  placeholder="Ex: 120"
-                />
-              </label>
-
-              <label>
-                Tempo de atendimento
-                <select name="duracao">
-                  <option value="">Selecione</option>
-                  <option>3 horas</option>
-                  <option>4 horas</option>
-                  <option>5 horas</option>
-                  <option>6 horas ou mais</option>
-                </select>
-              </label>
-
-              <label>
-                Pacote de interesse
-                <select name="pacote">
-                  <option>Ainda não sei</option>
-                  <option>Celebration</option>
-                  <option>Essencial</option>
-                  <option>Premium</option>
-                </select>
-              </label>
-
-              <label>
-                Preferência de drinks
-                <input
-                  type="text"
-                  name="preferencias"
-                  placeholder="Ex: caipirinhas, mojito, sem álcool..."
-                />
-              </label>
-            </div>
-
-            <label class="full-label">
-              Me conta um pouco da festa
-              <textarea
-                name="observacoes"
-                rows="4"
-                placeholder="Ex: vai ter cerimônia antes, pista depois, público mais jovem, preferência por drinks tropicais..."
-              ></textarea>
-            </label>
-
-            <div class="message-preview">
-              <strong>Mensagem que será enviada</strong>
-              <textarea id="messagePreview" rows="8" readonly></textarea>
-            </div>
-
-            <div class="form-actions">
-              <button class="button primary" type="submit">
-                Chamar no WhatsApp
-              </button>
-              <button class="button secondary" type="button" id="copyMessage">
-                Copiar mensagem
-              </button>
-            </div>
-
-            <p class="quote-disclaimer">
-              O site apenas monta a mensagem. A combinação final é feita pelo
-              WhatsApp.
-            </p>
-
-            <p
-              class="form-status"
-              id="formStatus"
-              role="status"
-              aria-live="polite"
-            ></p>
+          <div class="quote-launcher">
+            <div><span class="eyebrow">Direto ao ponto</span><h3>Vamos montar seu orçamento?</h3><p>Preencha os dados em 5 passos e escolha seus drinks no final.</p></div>
+            <button class="button primary" type="button" id="startQuote">Começar meu orçamento →</button>
+            <small>Consumo livre · de 3 a 6 drinks · sem compromisso</small>
+          </div>
+        </div>
+      </section>
+      <dialog class="quote-dialog" aria-labelledby="wizardTitle">
+        <div class="wizard-progress" role="progressbar" aria-label="Progresso do orçamento" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20"><span></span></div>
+        <header class="wizard-header"><div class="wizard-brand"><img src="images/logo.png" alt="Mr. DROP"><span>Seu bar, do seu jeito</span></div><button class="wizard-close" type="button" aria-label="Fechar orçamento">×</button></header>
+        <div class="wizard-content">
+          <p class="wizard-kicker" aria-live="polite">Passo 1 de 5</p><h2 id="wizardTitle" tabindex="-1">Vamos começar?</h2><p id="wizardHint">Seu contato e o que vamos comemorar.</p>
+          <form class="quote-form wizard-form" id="quoteForm" novalidate>
+            <section class="wizard-step" data-title="Vamos começar?" data-hint="Seu contato e o que vamos comemorar."><div class="form-grid">
+              <label>Seu nome<input name="nome" required maxlength="120" autocomplete="name"></label>
+              <label>Telefone / WhatsApp<input name="telefone" type="tel" inputmode="tel" required maxlength="20" autocomplete="tel" placeholder="(31) 99999-9999"></label>
+              <label>Tipo de evento<select name="evento" required><option value="">Selecione</option><option>Casamento</option><option>Aniversário</option><option>Corporativo</option><option>Formatura</option><option>Outro</option></select></label>
+            </div></section>
+            <section class="wizard-step" data-title="Onde vai ser?" data-hint="Informe o local e, se souber, o CEP." hidden><div class="form-grid">
+              <label>Cidade / espaço<input name="local" required maxlength="200" placeholder="Ex.: Belo Horizonte / Espaço X"></label>
+              <div class="cep-field"><label>CEP do evento<input name="cep" inputmode="numeric" autocomplete="postal-code" maxlength="9" pattern="[0-9]{5}-?[0-9]{3}" placeholder="00000-000" aria-describedby="cepHelp"></label><label class="checkbox-label"><input name="semCep" type="checkbox">Não sei o CEP</label><small id="cepHelp">Sem CEP, usamos o deslocamento básico e confirmamos o local depois.</small></div>
+            </div></section>
+            <section class="wizard-step" data-title="Quando vai acontecer?" data-hint="Pode deixar a data e as observações em branco se preferir." hidden>
+              <label>Data do evento<input name="data" type="date"></label>
+              <label class="full-label">Algum detalhe que devemos saber?<textarea name="observacoes" rows="3" maxlength="2000" placeholder="Preferências ou informações sobre a festa (opcional)"></textarea></label>
+            </section>
+            <section class="wizard-step" data-title="Qual é o tamanho da festa?" data-hint="Considere todos os convidados e as horas de atendimento do bar." hidden><div class="form-grid">
+              <label>Total de convidados<input name="convidados" type="number" min="1" max="100000" step="1" required placeholder="Ex.: 160"></label>
+              <label>Horas de festa<input name="duracao" type="number" min="0.5" max="48" step="0.5" required placeholder="Ex.: 5"></label>
+            </div></section>
+            <section class="wizard-step" data-title="Agora, escolha seus drinks." data-hint="De 3 a 6 opções. Recomendamos 4 para variar os sabores. Caipirinha e Moscow já estão incluídos." hidden>
+              <fieldset class="drink-picker"><legend class="sr-only">Escolha de 3 a 6 drinks</legend><div id="drinkOptions">Carregando opções…</div><p id="drinkCount" role="status"></p></fieldset>
+            </section>
+            <section class="wizard-step wizard-result" data-title="Seu orçamento" data-hint="" hidden>
+              <div id="quoteResult" class="quote-result" tabindex="-1" role="status" aria-live="polite"></div><p id="quoteResultNote" class="quote-disclaimer"></p>
+              <div class="form-actions"><a id="sendQuote" class="button primary" target="_blank" rel="noopener noreferrer" hidden>Confirmar pelo WhatsApp</a><button id="copyQuote" class="button secondary" type="button" disabled>Copiar pedido</button></div>
+              <details class="message-preview"><summary>Ver dados do pedido</summary><label class="sr-only" for="quoteMessage">Mensagem para confirmação</label><textarea id="quoteMessage" readonly rows="9"></textarea></details>
+            </section>
+            <div class="wizard-footer"><button id="quoteBack" type="button" class="button secondary" disabled>← Voltar</button><button id="quoteNext" type="submit" class="button primary">Avançar →</button></div>
+            <p id="quoteStatus" role="status" aria-live="polite"></p>
           </form>
         </div>
-      </section>
+      </dialog>
 
-      <section
-        class="admin-placeholder"
-        data-admin-ready="false"
-        aria-label="Area admin futura"
-      >
-        <div>
-          <p class="eyebrow">Proxima etapa</p>
-          <h2>A estrutura ja reserva uma futura aba admin.</h2>
-          <p>
-            Por enquanto, ela fica apenas como ponto preparado no HTML e no JS,
-            sem tela de login, banco ou painel.
-          </p>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
@@ -454,5 +345,7 @@
     </a>
 
     <script src="script.js"></script>
+    <script src="quote-ui.js"></script>
+
   </body>
 </html>

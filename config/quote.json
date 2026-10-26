@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "guestsPerBartender": 72,
+  "guestsPerBardeck": 200,
+  "hourlyBartender": 100,
+  "hourlyBardeck": 100,
+  "hourlyMeaningConfirmed": true,
+  "assembledPer10Minutes": 4,
+  "preparedPer10Minutes": 2,
+  "transportBase": 50,
+  "baseCep": "30690580",
+  "transportIncludedKm": 20,
+  "transportExtraKm": 0,
+  "transportConfirmed": true,
+  "glassRentalPerDozen": 20,
+  "glassesPerGuest": 2,
+  "generalPerGuestHour": null,
+  "structureCost": 0,
+  "markupPercent": null,
+  "drinks": [
+    {
+      "id": "caipirinha",
+      "name": "Caipirinha",
+      "method": "preparado",
+      "costPerDrink": 1,
+      "recipe": "Limão, açúcar, gelo e cachaça. Quantidades a validar."
+    },
+    {
+      "id": "moscow",
+      "name": "Moscow Mule",
+      "method": "montado",
+      "costPerDrink": 2,
+      "recipe": "Receita da casa a validar."
+    },
+    {
+      "id": "mojito",
+      "name": "Mojito",
+      "method": "preparado",
+      "costPerDrink": 1.5,
+      "recipe": "Receita da casa a validar."
+    },
+    {
+      "id": "gin",
+      "name": "Gin Tropical",
+      "method": "montado",
+      "costPerDrink": 2.2,
+      "recipe": "Receita da casa a validar."
+    },
+    {
+      "id": "spritz",
+      "name": "Spritz",
+      "method": "montado",
+      "costPerDrink": 3,
+      "recipe": "Receita da casa a validar."
+    },
+    {
+      "id": "mocktail",
+      "name": "Mocktail sem álcool",
+      "method": "preparado",
+      "costPerDrink": 1,
+      "recipe": "Receita da casa a validar."
+    }
+  ]
+}
